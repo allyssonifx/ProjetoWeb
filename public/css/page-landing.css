@@ -1,0 +1,75 @@
+#page-landing{
+    background: linear-gradient(329.54deg,#111111 0%, #000220 100%) no-repeat;
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+
+}
+
+#container{
+    margin: auto;
+    width: min(90%, 200rem);
+}
+
+.location,h1,.visit p{
+    height:16vh;
+}
+
+.visit a{
+    width: 8rem;
+    height: 8rem;
+    background: #661480;
+    border: none;
+    border-radius: 3rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    transition: background .200ms;
+}
+
+.visit a:hover{
+    background:#96ff96;
+}
+/* desktop version*/
+@media(min-width: 760px){
+    #container{
+        padding: 2rem 1rem;
+        /* shorthand background: image reapeat positios /size */
+        background: url("../images/me.jpg") no-repeat 80% / clamp(15rem,30vw, 40rem);
+    }
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .location,h1,.visit p{
+        height:initial;
+        text-align: initial;
+    }
+    .location{
+        text-align: right;
+        font-size: 2.4rem;
+    }
+    main h1{
+        margin: clamp(10%, 9vh, 12%) 0 3rem;
+        font-size: clamp(4rem, 5vw, 5rem);
+        font-weight: bold;
+        line-height: 1;
+        width: min(100px, 70%)
+    }
+    .visit{
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+    }
+    .visit a{
+        margin: initial;
+    }
+    .visit p{
+        line-height: 1.5;
+        width: clamp(20rem, 20vw, 30rem)
+
+    }
+}
